@@ -19,5 +19,6 @@ RUN apt-get update \
     && php -r "unlink('composer-setup.php');" \
     && curl -sL https://deb.nodesource.com/setup_8.x | /bin/sh - \ 
     && apt-get install -y nodejs \
+    && npm install -g npm \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
